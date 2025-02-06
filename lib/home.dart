@@ -27,62 +27,62 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double sw = MediaQuery.sizeOf(context).width;
-    print("Screen Width ################## : $sw}");
     return Scaffold(
       backgroundColor: Colors.black,
-      body: SafeArea(
-        child: Column(
+        body: Column(
           children: [
             Container(
-              margin: EdgeInsets.all(5),
-              padding: EdgeInsets.symmetric(vertical: 5),
-              width: 300,
-              decoration: BoxDecoration(
-                color: Colors.black,
-                border: Border.all(width: 2, color: Colors.blue),
-                borderRadius: BorderRadius.circular(30),
-              ),
-              child: Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    IconButton(
-                      icon: Icon(Icons.home),
-                      color: Colors.white,
-                      onPressed: () {
-                        scrollToSection(navigatorKeys[0].currentContext!);
-                      },
-                    ),
-                    IconButton(
-                      icon: Icon(Icons.description),
-                      color: Colors.white,
-                      onPressed: () {
-                        scrollToSection(navigatorKeys[1].currentContext!);
-                      },
-                    ),
-                    IconButton(
-                      icon: Icon(Icons.work),
-                      color: Colors.white,
-                      onPressed: () {
-                        scrollToSection(navigatorKeys[2].currentContext!);
-                      },
-                    ),
-                    IconButton(
-                      icon: Icon(Icons.contact_page),
-                      color: Colors.white,
-                      onPressed: () {
-                        scrollToSection(navigatorKeys[3].currentContext!);
-                      },
-                    ),
-                    IconButton(
-                      icon: Icon(Icons.location_on),
-                      color: Colors.white,
-                      onPressed: () {
-                        scrollToSection(navigatorKeys[4].currentContext!);
-                      },
-                    ),
-                  ],
+              color: Colors.black,
+              child: Container(
+                margin: const EdgeInsets.all(5),
+                padding: const EdgeInsets.symmetric(vertical: 5),
+                width: 300,
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                  border: Border.all(width: 2, color: Colors.blue),
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                child: Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      IconButton(
+                        icon: const Icon(Icons.home),
+                        color: Colors.white,
+                        onPressed: () {
+                          scrollToSection(navigatorKeys[0].currentContext!);
+                        },
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.description),
+                        color: Colors.white,
+                        onPressed: () {
+                          scrollToSection(navigatorKeys[1].currentContext!);
+                        },
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.work),
+                        color: Colors.white,
+                        onPressed: () {
+                          scrollToSection(navigatorKeys[2].currentContext!);
+                        },
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.contact_page),
+                        color: Colors.white,
+                        onPressed: () {
+                          scrollToSection(navigatorKeys[3].currentContext!);
+                        },
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.location_on),
+                        color: Colors.white,
+                        onPressed: () {
+                          scrollToSection(navigatorKeys[4].currentContext!);
+                        },
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -90,7 +90,7 @@ class HomePage extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                    child: Container(
+                    child: SizedBox(
                       height: MediaQuery.sizeOf(context).height,
                       width: MediaQuery.sizeOf(context).width,
                       child: SingleChildScrollView(
@@ -110,10 +110,8 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
+            )
           ],
-        ),
-      ),
-    );
+        ));
   }
 }

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class AboutWidget extends StatelessWidget {
   const AboutWidget({
     super.key,
-    required this.navigatorKeys,
+     required this.navigatorKeys,
   });
 
   final List<GlobalKey<State<StatefulWidget>>> navigatorKeys;
