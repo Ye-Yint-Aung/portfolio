@@ -39,6 +39,10 @@ dependencies:
   google_fonts: ^6.2.1
   widget_and_text_animator: ^1.1.5
   animated_text_kit: ^4.2.2
+  avatar_glow: ^3.0.1
+  animated_read_more_text: ^0.0.6
+  flutter_bloc: ^9.1.1
+  url_launcher: ^6.3.1
 
 dev_dependencies:
   flutter_test:
@@ -66,6 +70,8 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

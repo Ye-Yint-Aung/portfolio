@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_app_demo/utils/styles.dart';
 import 'package:web_app_demo/widgets/contact_widget.dart';
 import 'package:web_app_demo/widgets/experience_widget.dart';
 import 'package:web_app_demo/widgets/home_widget.dart';
@@ -27,56 +28,107 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("Hello...............");
     return Scaffold(
-      backgroundColor: Colors.black,
+        backgroundColor: Colors.black,
         body: Column(
           children: [
             Container(
               color: Colors.black,
               child: Container(
-                margin: const EdgeInsets.all(5),
+                //margin: const EdgeInsets.symmetric(vertical: 5,horizontal: 20),
                 padding: const EdgeInsets.symmetric(vertical: 5),
-                width: 300,
-                decoration: BoxDecoration(
+                decoration:  BoxDecoration(
+                  border: Border.all(width: 0.5, color: Colors.white),
+                  gradient: LinearGradient(
+                      colors: [Colors.white12, Colors.black],
+                      begin: FractionalOffset(0.0, 0.0),
+                      end: FractionalOffset(0.5, 0.0),
+                      stops: [0.0, 1.0],
+                      //tileMode: TileMode.clamp
+                  ),
+                ),
+                //width: 300,
+                /*decoration: BoxDecoration(
                   color: Colors.black,
                   border: Border.all(width: 2, color: Colors.blue),
                   borderRadius: BorderRadius.circular(30),
-                ),
+                ),*/
                 child: Expanded(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      IconButton(
-                        icon: const Icon(Icons.home),
-                        color: Colors.white,
+                      TextButton(
+                        child: Text(
+                          "Home",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+
+                            fontFamily: bodoniFont,
+                          ),
+                        ),
+                        //color: Colors.white,
                         onPressed: () {
                           scrollToSection(navigatorKeys[0].currentContext!);
                         },
                       ),
-                      IconButton(
-                        icon: const Icon(Icons.description),
-                        color: Colors.white,
+                      TextButton(
+                        child: const Text(
+                          "About",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+
+                            fontFamily: bodoniFont,
+                          ),
+                        ),
+                        //color: Colors.white,
                         onPressed: () {
                           scrollToSection(navigatorKeys[1].currentContext!);
                         },
                       ),
-                      IconButton(
-                        icon: const Icon(Icons.work),
-                        color: Colors.white,
+                      TextButton(
+                        child: Text(
+                          "Project Experience",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+
+                            fontFamily: bodoniFont,
+                          ),
+                        ),
+                        //color: Colors.white,
                         onPressed: () {
                           scrollToSection(navigatorKeys[2].currentContext!);
                         },
                       ),
-                      IconButton(
-                        icon: const Icon(Icons.contact_page),
-                        color: Colors.white,
+                      TextButton(
+                        child: const Text(
+                          "Tool & Tech",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+
+                            fontFamily: bodoniFont,
+                          ),
+                        ),
+                        //color: Colors.white,
                         onPressed: () {
                           scrollToSection(navigatorKeys[3].currentContext!);
                         },
                       ),
-                      IconButton(
-                        icon: const Icon(Icons.location_on),
-                        color: Colors.white,
+                      TextButton(
+                        child: const Text(
+                          "Contact",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+
+                            fontFamily: bodoniFont,
+                          ),
+                        ),
+                        //color: Colors.white,
                         onPressed: () {
                           scrollToSection(navigatorKeys[4].currentContext!);
                         },
