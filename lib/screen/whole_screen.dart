@@ -38,23 +38,25 @@ class _WholeScreenState extends State<WholeScreen> {
   Widget build(BuildContext context) {
     return ListView(
       controller: controller,
-      children: const [
-        FirstSection(),
-        SecondScreen(),
-        SizedBox(
+      children: [
+        const FirstSection(),
+        const SecondScreen(),
+        const SizedBox(
           height: 100,
         ),
-        ThirdSection(),
-        SizedBox(
+        const ThirdSection(),
+        const SizedBox(
           height: 50,
         ),
-        ForthSection(),
-        SizedBox(
+        const ForthSection(),
+        const SizedBox(
           height: 50.0,
         ),
         //FifthSection(),
 
-        SeventhSection(),
+        const SeventhSection(),
+
+        Image.network("https://drive.usercontent.google.com/download?id=122X7enJkkpg2_7r7vWpaDKQW-8lov9eY&authuser=0"),
         /*SizedBox(
           height: 100.0,
         ),*/
@@ -62,7 +64,48 @@ class _WholeScreenState extends State<WholeScreen> {
 
         //SixthSection(),
 
-       // NinthSection(),
+        // NinthSection(),
+      ],
+    );
+  }
+}
+
+class Example extends StatelessWidget {
+  const Example({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
+
+class One extends StatefulWidget {
+  const One({super.key});
+
+  @override
+  State<One> createState() => _OneState();
+}
+
+class _OneState extends State<One> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          child: Text("First"),
+        ),
+        Container(
+          decoration: BoxDecoration(color: Colors.white),
+          child: Text("Second"),
+        ),
+        Container(
+          child: Text("Third"),
+        ),
+        Container(
+          child: Text("data"),
+        ),
+        const Placeholder(),
+        Placeholder(),
       ],
     );
   }
